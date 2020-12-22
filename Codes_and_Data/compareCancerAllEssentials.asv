@@ -13,7 +13,7 @@ iess_gene = sum(depl_p.values < 0,2)>=20;
 fprintf('%d genes were essential\n',sum(iess_gene));
 
 % get GO terms
-unzip(strcat(pwd,'\Data\goa_human.zip'),strcat(pwd,'\Data'));
+unzip(strcat(pwd,'/Data/goa_human.zip'),strcat(pwd));
 humanGO = goannotread_ch(strcat(pwd,'\Data\goa_human.gaf'),'aspect','p');
 humanGO = struct2table(humanGO);
 

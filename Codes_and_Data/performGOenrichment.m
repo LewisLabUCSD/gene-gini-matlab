@@ -2,7 +2,7 @@ function [sigTable,GOcover] = performGOenrichment(giniData,GO,n)
 
 
 % % load GO table
-unzip(strcat(pwd,'\Data\goa_human.zip'));
+unzip(strcat(pwd,'\Data\goa_human.zip'),strcat(pwd,'\Data'));
 humanGO = goannotread_ch(strcat(pwd,'\Data\goa_human.gaf'),'aspect','p');
 humanGO = struct2table(humanGO);
 
