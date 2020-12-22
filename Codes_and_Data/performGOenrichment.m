@@ -2,8 +2,8 @@ function [sigTable,GOcover] = performGOenrichment(giniData,GO,n)
 
 
 % % load GO table
+unzip(strcat(pwd,'\Data\goa_human.zip'));
 humanGO = goannotread_ch(strcat(pwd,'\Data\goa_human.gaf'),'aspect','p');
-% humanGO = goannotread_ch('C:\substorage\GoogleDrive\Data\GOAnnotations\goa_human.gaf','aspect','p');
 humanGO = struct2table(humanGO);
 
 if isfield(giniData,'gc') || nargin > 3

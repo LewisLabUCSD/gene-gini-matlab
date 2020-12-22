@@ -18,7 +18,7 @@ end
 bar(1:1:9,x);
 
 calcJaccardSimilarity(L,O,'matrix',true,0);
-
+unzip(strcat(pwd,'\Data\goa_human.zip'));
 humanGO = goannotread_ch(strcat(pwd,'\Data\goa_human.gaf'),'aspect','p');
 humanGO = struct2table(humanGO);
 GO = geneont('live',true);
